@@ -1,0 +1,52 @@
+Exception in NSApplicationAWT:
+ -[__NSCFNumber compare:]: nil argument
+0   CoreFoundation                      0x00000001ac49719c __exceptionPreprocess + 176
+1   libobjc.A.dylib                     0x00000001abfb64d4 objc_exception_throw + 60
+2   CoreFoundation                      0x00000001ac5819d4 -[__NSCFString characterAtIndex:].cold.1 + 0
+3   CoreFoundation                      0x00000001ac581bdc -[__NSCFBoolean compare:].cold.1 + 0
+4   CoreFoundation                      0x00000001ac3f7308 -[__NSCFNumber compare:] + 348
+5   CoreFoundation                      0x00000001ac3f7190 -[__NSCFNumber isEqualToNumber:] + 24
+6   libawt_lwawt.dylib                  0x00000001249f1f4c -[AWTWindow _displayChanged:] + 176
+7   CoreFoundation                      0x00000001ac413254 __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 148
+8   CoreFoundation                      0x00000001ac4aef30 ___CFXRegistrationPost_block_invoke + 88
+9   CoreFoundation                      0x00000001ac4aee78 _CFXRegistrationPost + 440
+10  CoreFoundation                      0x00000001ac3e4580 _CFXNotificationPost + 704
+11  Foundation                          0x00000001ad3419e4 -[NSNotificationCenter postNotificationName:object:userInfo:] + 88
+12  AppKit                              0x00000001af8034bc __67-[NSWindow _updateSettingsSendingScreenChangeNotificationToScreen:]_block_invoke + 496
+13  AppKit                              0x00000001af67f7e0 NSPerformVisuallyAtomicChange + 108
+14  AppKit                              0x00000001af8032c0 -[NSWindow _updateSettingsSendingScreenChangeNotificationToScreen:] + 96
+15  AppKit                              0x00000001af680cbc -[NSWindow _setFrameCommon:display:fromServer:] + 1852
+16  AppKit                              0x00000001afe0dc00 -[NSWindow(NSScreenLayout) _setFrame:fromAdjustmentToScreen:anchorIfNeeded:animate:] + 1540
+17  AppKit                              0x00000001af92452c -[NSWindow _adjustWindowToScreen] + 1100
+18  AppKit                              0x00000001af943e0c -[NSWindow _displayChangedSoAdjustWindows:] + 100
+19  AppKit                              0x00000001affb156c -[_NSFullScreenContentController displayChanged] + 28
+20  AppKit                              0x00000001b0055834 -[_NSFullScreenSpace displayChanged] + 48
+21  AppKit                              0x00000001b0054504 _fullScreenInstanceMovedSpaces + 208
+22  SkyLight                            0x00000001b1029e34 _ZN12_GLOBAL__N_123notify_datagram_handlerEj15CGSDatagramTypePvmS1_ + 888
+23  SkyLight                            0x00000001b1369c84 _ZN21CGSDatagramReadStream26dispatchMainQueueDatagramsEv + 228
+24  SkyLight                            0x00000001b1369b80 ___ZN21CGSDatagramReadStream15mainQueueWakeupEv_block_invoke + 28
+25  libdispatch.dylib                   0x00000001ac18e874 _dispatch_call_block_and_release + 32
+26  libdispatch.dylib                   0x00000001ac190400 _dispatch_client_callout + 20
+27  libdispatch.dylib                   0x00000001ac19ebf8 _dispatch_main_queue_drain + 928
+28  libdispatch.dylib                   0x00000001ac19e848 _dispatch_main_queue_callback_4CF + 44
+29  CoreFoundation                      0x00000001ac45fc88 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 16
+30  CoreFoundation                      0x00000001ac41d4a8 __CFRunLoopRun + 1992
+31  CoreFoundation                      0x00000001ac41c58c CFRunLoopRunSpecific + 612
+32  HIToolbox                           0x00000001b5c51df4 RunCurrentEventLoopInMode + 292
+33  HIToolbox                           0x00000001b5c51c30 ReceiveNextEventCommon + 648
+34  HIToolbox                           0x00000001b5c51988 _BlockUntilNextEventMatchingListInModeWithFilter + 76
+35  AppKit                              0x00000001af63bf58 _DPSNextEvent + 636
+36  AppKit                              0x00000001af63b0f4 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 716
+37  libosxapp.dylib                     0x000000012370b990 -[NSApplicationAWT nextEventMatchingMask:untilDate:inMode:dequeue:] + 144
+38  AppKit                              0x00000001af62f558 -[NSApplication run] + 464
+39  libosxapp.dylib                     0x000000012370b748 +[NSApplicationAWT runAWTLoopWithApp:] + 208
+40  libawt_lwawt.dylib                  0x0000000124a53c8c +[AWTStarter starter:headless:] + 488
+41  libosxapp.dylib                     0x000000012370d630 +[ThreadUtilities invokeBlockCopy:] + 28
+42  Foundation                          0x00000001ad3b1d54 __NSThreadPerformPerform + 264
+43  CoreFoundation                      0x00000001ac41e710 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28
+44  CoreFoundation                      0x00000001ac41e6a4 __CFRunLoopDoSource0 + 176
+45  CoreFoundation                      0x00000001ac41e414 __CFRunLoopDoSources0 + 244
+46  CoreFoundation                      0x00000001ac41d01c __CFRunLoopRun + 828
+47  CoreFoundation                      0x00000001ac41c58c CFRunLoopRunSpecific + 612
+48  studio                              0x00000001046f8870 main + 3360
+49  dyld                                0x00000001abfe7f28 start + 2236
